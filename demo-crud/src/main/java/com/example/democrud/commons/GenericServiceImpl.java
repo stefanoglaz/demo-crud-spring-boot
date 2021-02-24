@@ -32,6 +32,7 @@ public abstract class GenericServiceImpl<T, ID extends Serializable> implements 
 
 	@Override
 	public List<T> getAll() {
+
 		List<T> returnList = new ArrayList<>();
 		getDao().findAll().forEach(obj -> returnList.add(obj));
 		return returnList;
