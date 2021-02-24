@@ -1,3 +1,3 @@
 # demo-crud-spring-boot
-CRUD com Spring Boot utilizando Spring security, Thymeleaf e Bootstrap
+CRUD com Spring Boot utilizando Thymeleaf e Bootstrap
 
