@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  db:
+    image: "postgres:9.6-alpine"
+    container_name: db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5000:5432
+
+  demo-crud-app:
+    build: .
+    container_name: demo-crud
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
